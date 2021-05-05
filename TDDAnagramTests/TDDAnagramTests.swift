@@ -40,6 +40,25 @@ class TDDAnagramTests: XCTestCase {
         XCTAssertEqual(sut.word, input)
         
     }
+    
+    func test_canReadBothUserInputs() {
+        
+        //given
+        
+        sut.word = "Hello"
+        
+        sut.list = ["dfgss","john","doe","olleh","helllooooo","new york"]
+        
+        //when
+        
+        let input = sut.returnAllUserInput(word: sut.word!, list: sut.list!)
+        
+        //then
+        
+        XCTAssertEqual(input.0, sut.word)
+        XCTAssertEqual(input.1, sut.list)
+        
+    }
 
 
 

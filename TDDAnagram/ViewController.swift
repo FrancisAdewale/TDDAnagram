@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var word: String?
+    var list: [String]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,10 @@ class ViewController: UIViewController {
 
     }
     
-
+    func returnAllUserInput(word: String, list: [String]) -> (String, [String]) {
+        
+        return (word, list)
+    }
 
 }
 
