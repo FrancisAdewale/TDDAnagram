@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let result = returnAnagramValues(word: "listen", list: ["enlists","google","inlets","banana"])
+        print(result)
         view.backgroundColor = UIColor.gray
         
     }
@@ -31,6 +33,30 @@ class ViewController: UIViewController {
         
         return (word, list)
     }
+    
+    func returnAnagramValues(word:String, list: [String]) -> [String] {
+        
+        var output = [String]()
 
+        
+        for w in list {
+            
+            if word.count != w.count {
+                continue
+            } else {
+                
+                let newWord = word.sorted()
+                let newW = w.sorted()
+                
+                if newWord == newW {
+                    output.append(w)
+                }
+            }
+         
+        }
+        return output
+        
+    }
+    
 }
 
