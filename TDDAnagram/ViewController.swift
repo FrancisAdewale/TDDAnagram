@@ -8,11 +8,24 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var word: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        view.backgroundColor = UIColor.gray
+        
     }
+    
+    
+    func returnUsersInputWord( _ word: String, anagramList: [String]?) -> String {
+        
+        return word
+        
+
+    }
+    
 
 
 }
